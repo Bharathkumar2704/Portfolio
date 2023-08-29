@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharathKumar-Journey</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const textElement = document.querySelector(".header-text p");
+            const textArray = [
+                "Python full stack developer",
+                "Data analyst",
+                "Data scientist",
+                "Machine learning",
+                "Django developer"
+            ];
+            let currentIndex = 0;
+            let currentCharIndex = 0;
+            let isDeleting = false;
+
+            function updateText() {
+                const currentText = textArray[currentIndex];
+                textElement.textContent = currentText.substring(0, currentCharIndex);
+
+                if (isDeleting) {
+                    currentCharIndex--;
+                } else {
+                    currentCharIndex++;
+                }
+
+                if (currentCharIndex === currentText.length + 1) {
+                    isDeleting = true;
+                    currentCharIndex--;
+                }
+
+                if (currentCharIndex === 0 && isDeleting) {
+                    isDeleting = false;
+                    currentIndex = (currentIndex + 1) % textArray.length;
+                }
+            }
+
+            setInterval(updateText, 100); // Adjust the speed here
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="./index.html"><img src= "images/logo.gif"></a>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./skills.html">Skills</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="header">
+        <div class="container">
+            
+            <div class="header-text">
+                <h1>Hi,I am <span>Bharathkumar</span> </h1>
+                <p>Python full stack developer</p>
+            </div>
+        </div>
+        <div class="box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    
+    
+
+
+    
+
+</body>
+</html>

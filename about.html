@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutMe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="./index.html"><img src= "images/logo.gif"></a>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./skills.html">Skills</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.png">
+                </div>
+                <div class="about-col-2 highlight">
+                    <h1 class="sub-title">About Me</h1>
+                
+                    Experienced <span class="highlight-container"><span class="highlight">Python</span></span>  engineer with over 3 years of tenure, specializing in <span class="highlight-container"><span class="highlight">full-stack development</span></span> , meticulous <span class="highlight-container"><span class="highlight">API design</span></span> , \
+                    and effective cloud orchestration. Proficient in renowned frameworks such as <span class="highlight-container"><span class="highlight">Django REST, FastAPI, Node.js with Express.js</span></span> , \
+                    and skilled in database management encompassing <span class="highlight-container"><span class="highlight">PostgreSQL and NoSQL</span></span> .
+                     Profound competence extends to <span class="highlight-container"><span class="highlight">async programming, multithreading, and parallelism</span></span> . Accomplished in <span class="highlight-container"><span class="highlight">NLP model</span></span> optimization,\
+                     <span class="highlight-container"><span class="highlight">ML pipeline</span></span> construction, and adept analysis of time series data. Demonstrated expertise in establishing robust <span class="highlight-container"><span class="highlight">CI/CD</span></span>  systems, \
+                      overseeing <span class="highlight-container"><span class="highlight">Kubernetes</span></span>  deployments, and effective infrastructure management via <span class="highlight-container"><span class="highlight">Terraform and Ansible</span></span> , while staying attuned to\
+                       evolving technological advancements.</p>
+                    <div class="tab-title">
+                        <p class="tab-links  active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    
+                    <div class="tab-contents  active-tab" id="experience">
+                        <ul>
+                            <li><span>Python Full Stack Developer</span>
+                                <br><p>Techy geeks IT</p>
+                            <li><span>Python Developer</span>
+                                <br>Integra software solutions</li>
+                            <li><span>Intern</span>
+                                <br>HashInclude private limited</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>University of Liverpool</span><br>Master's in big-data and high performance computing</li>
+                            <li><span>S.R.M univeristy</span><br>Bachelor's in computer science</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    
+    
+</body>
+</html>
