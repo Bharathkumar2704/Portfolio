@@ -192,9 +192,33 @@ animation: pulse 2s infinite; /* Apply the pulse animation */
     color:white;
 }
 
+
+
+
+
+
+
+#exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set the height to 100% of the viewport height for vertical centering */
+}
+
+.tab-title {
+    text-align: center;
+}
+
+.tab-contents {
+    text-align: left; /* Align the text to the left within the contents */
+}
+
+
 .tab-title{
     display:flex;
     margin:20px 0 40px;
+    
 }
 
 .tab-links{
@@ -204,6 +228,7 @@ animation: pulse 2s infinite; /* Apply the pulse animation */
     cursor: pointer;
     position:relative;
 }
+
 
 .tab-links::after{
     content:'';
@@ -409,6 +434,49 @@ form .btn2{
     cursor:pointer;
 }
 
+
+
+
+.contact-left .btn2 {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #9900ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    animation: pulse 2s infinite;
+  }
+  
+.contact-left .btn2:hover {
+background-color: white;
+color:#9900ff;
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.1);
+}
+100% {
+    transform: scale(1);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .copyright{
     width:100%;
     text-align:center;
@@ -432,6 +500,7 @@ form .btn2{
     margin-left: -140px;
     margin-top: 20px;
 }
+
 
 .demo .list a {
     
